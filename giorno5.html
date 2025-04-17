@@ -1,1 +1,197 @@
-<html><head><link rel='stylesheet' href='style.css'></head><body><h1>Giorno 5</h1></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function startTimer(button) {
+      const timerDisplay = button.nextElementSibling;
+      let timeLeft = parseInt(timerDisplay.textContent);
+      button.disabled = true;
+      const originalText = button.textContent;
+      button.textContent = "Recupero...";
+      const interval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          button.textContent = originalText;
+          timerDisplay.textContent = "60";
+          button.disabled = false;
+        }
+      }, 1000);
+    }
+  </script>
+  <title>Giorno 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 10px;
+    }
+    .exercise-card {
+      background-color: #111;
+      border: 3px solid #28a745;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .weights label {
+      display: block;
+      margin: 5px 0;
+    }
+    .weights input {
+      width: 60px;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      margin-left: 10px;
+    }
+    .timer-section {
+      margin: 10px 0;
+    }
+    .timer-display {
+      font-size: 24px;
+      font-weight: bold;
+      background: #222;
+      color: red;
+      padding: 10px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .exercise-image img {
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Giorno 5</h1>
+  
+<div class="exercise-card">
+  <h2>Esercizio 1</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+<div class="exercise-card">
+  <h2>Esercizio 2</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+<div class="exercise-card">
+  <h2>Esercizio 3</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+<div class="exercise-card">
+  <h2>Esercizio 4</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+<div class="exercise-card">
+  <h2>Esercizio 5</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+<div class="exercise-card">
+  <h2>Esercizio 6</h2>
+  <p>4 Serie - 10 Ripetizioni</p>
+  <p>Recupero 60 secondi</p>
+  <div class="weights">
+    <label>Serie 1: <input type="text" placeholder="kg"></label>
+    <label>Serie 2: <input type="text" placeholder="kg"></label>
+    <label>Serie 3: <input type="text" placeholder="kg"></label>
+    <label>Serie 4: <input type="text" placeholder="kg"></label>
+  </div>
+  <div class="timer-section">
+    <button onclick="startTimer(this)">Start Recupero</button>
+    <div class="timer-display">60</div>
+  </div>
+  <div class="exercise-image">
+    <img src="panca-inclinata.jpg" width="100%" />
+  </div>
+</div>
+
+</body>
+</html>
