@@ -43,36 +43,10 @@ function startTimer(idx) {
   }, 1000);
 }
 
- = () => {
-  for (let i = 1; i <= 4; i++) {
-    const input = document.getElementById("weight" + i);
-    const saved = localStorage.getItem("weight" + i);
-    if (saved) input.value = saved;
-    input.addEventListener("input", () => {
-      localStorage.setItem("weight" + i, input.value);
-    });
+function playAlert() {
+  const audio = new Audio("beep.mp3");
+  audio.play();
+  if (window.navigator.vibrate) {
+    window.navigator.vibrate(500);
   }
-
-  const recoveryInput = document.getElementById("recoveryTime");
-  const recoveryText = document.getElementById("recoveryText");
-  const countdown = document.getElementById("countdown");
-
-  const val = parseInt(recoveryInput.value, 10);
-  recoveryText.innerText = "Recupero " + val + " secondi";
-  countdown.innerText = val;
-  recoveryInput.style.backgroundColor = "green";
-  document.getElementById("timer-container").style.borderColor = "green";
-
-  recoveryInput.addEventListener("input", () => {
-    const newVal = parseInt(recoveryInput.value, 10);
-    if (!isNaN(newVal)) {
-      recoveryText.innerText = "Recupero " + newVal + " secondi";
-      countdown.innerText = newVal;
-      originalSeconds = newVal;
-    }
-  });
-
-  const startBtn = document.querySelector("button");
-  startBtn.style.backgroundColor = "green";
-};
-
+}

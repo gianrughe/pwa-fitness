@@ -9,6 +9,47 @@ body {
   color: white;
 }
 
+.home-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.program-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.program-button {
+  display: block;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 3px solid #28a745;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.day-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.muscle-group {
+  font-size: 14px;
+  color: #ccc;
+}
+
 .container {
   max-width: 400px;
   margin: auto;
@@ -21,12 +62,11 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.container h1 {
+  font-size: 24px;
 }
 
-p {
+.container p {
   font-size: 16px;
   color: #ccc;
 }
@@ -52,12 +92,6 @@ button {
 
 button:hover {
   background-color: #218838;
-}
-
-#countdown {
-  font-size: 32px;
-  margin-top: 10px;
-  color: #ffd700;
 }
 
 .images {
